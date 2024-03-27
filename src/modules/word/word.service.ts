@@ -16,13 +16,14 @@ export class WordService {
         return   paginate(query, this.repo, {
             sortableColumns: ['id', 'word', 'level', 'pos'],
             nullSort: 'last',
-            defaultSortBy: [['id', 'DESC']],
-            searchableColumns: ['word', 'pos'],
+            defaultSortBy: [['word', 'ASC']],
+            searchableColumns: ['word'],
             select: ['id', 'word', 'definition_url', 'level', 'pos', 'voice_url'],
             filterableColumns: {
                 name: [FilterOperator.EQ, FilterSuffix.NOT],
                 pos: true,
             },
+
         })
     }
 
