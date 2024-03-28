@@ -18,6 +18,7 @@ export class WordService {
             nullSort: 'last',
             defaultSortBy: [['word', 'ASC']],
             searchableColumns: ['word'],
+            defaultLimit: 10,
             select: ['id', 'word', 'definition_url', 'level', 'pos', 'voice_url'],
             filterableColumns: {
                 name: [FilterOperator.EQ, FilterSuffix.NOT],
