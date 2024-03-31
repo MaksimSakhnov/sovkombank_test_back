@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: everybodyknowsthispassword
       PGDATA: /data/postgres
     container_name: postgres
     volumes:
@@ -38,7 +38,7 @@ services:
     container_name: nest-pgadmin4
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
-      - PGADMIN_DEFAULT_PASSWORD=pgadmin4
+      - PGADMIN_DEFAULT_PASSWORD=everybodyknowsthispassword
     ports:
       - '5050:80'
     depends_on:
